@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 const Card = ({ name, email, id }) => {
   return (
-    <div className=" tc flex-row flex-wrap bg-light-green br3 pa3 grow ma2 shadow-5 dib bw2">
+    <div className=" tc bg-light-green br3 pa3 grow ma2 shadow-5 dib bw2">
       {/* main container */}
       <img src={`https://robohash.org/${id}?200x200`} alt="robo profile pic" />
       <div>
