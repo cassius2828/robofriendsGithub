@@ -4,6 +4,7 @@ import SearchBox from "../components/searchBox";
 // import { robots } from "./robots";
 import "./App.css";
 import Scroll from "../components/Scroll";
+import ErrorBoundry from "../components/ErrorBoundry";
 
 class App extends Component {
   constructor(props) {
@@ -38,7 +39,9 @@ class App extends Component {
           <h1 className="mt5 tc">Loading Bots...</h1>
         ) : (
           <Scroll>
-            <CardList robots={filteredRobots} />
+            <ErrorBoundry>
+              <CardList robots={filteredRobots} />
+            </ErrorBoundry>
           </Scroll>
         )}
       </div>
